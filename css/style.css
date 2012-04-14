@@ -1,0 +1,40 @@
+body {
+	background: #EAEAEA;
+	margin: 20px;
+}
+
+h1 {
+	font: bold 20px/1.4 "Helvetica", arial, serif;
+}
+	h1 span {
+		background: #666;
+		color: #FFF;
+		border: dashed #CCC;
+		border-width: 1px;
+		outline: #666 solid 2px;
+		position: relative;
+		z-index: 20;
+		padding: 3px;
+	}
+	
+	.shorter-than-next {
+		border-bottom: none;
+		z-index: 21;
+	}
+	.shorter-than-previous {
+		border-top: none;
+	}
+		.shorter-than-previous.shorter-than-next {
+			border-top: none;
+			border-bottom: none;
+			z-index: 22;
+		}
+	.longer-than-previous {
+		z-index: 19;
+	}
+	.longer-than-previous.shorter-than-next {
+		z-index: 19;
+	}
+	.longer-than-previous.longer-than-next {
+		z-index: 18;
+	}
